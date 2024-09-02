@@ -36,5 +36,11 @@ public class Attraction {
     @ElementCollection
     private List<String> dance;
 
+    @ElementCollection
+    private List<String> festivals;
+
+    @ElementCollection
+    private List<String> traditional_events;
+
     // Getters and Setters
 }
