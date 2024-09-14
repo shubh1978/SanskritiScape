@@ -1,6 +1,7 @@
 package org.example.model;
-import jakarta.persistence.*;
 import lombok.Data;
+
+import javax.persistence.*;
 //import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
@@ -15,7 +16,10 @@ public class Blog {
 
     private String city;
     private String state;
-    private String author;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id", nullable = false)
+    private User author;
     private String content;
 
     // Getters and Setters
